@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Menampilkan Bilangan Prima dari Angka Masukkan Pengguna</h1>
+<p>Silakan masukkan angka maksimal yang akan menunjukkan angka - angka prima berurutan sampai angka tersebut</p>
+Bilangan : <input id="angka"><br>
+<button onclick="cekprima()">Tampilkan</button>
+<p id="bil"></p>
+<script>
+function cekprima() {
+	let bilangan = document.getElementById("angka").value;
+	var daftar =" ";
+	for (let i = 2; i<=bilangan; i++) 
+		{
+			
+			let o = 0;
+			for (let j = 1; j<=bilangan;j++) 
+				{
+					if (i % j == 0) 
+						{
+							o = o + 1;
+						}
+				}
+			if (o == 2) 
+				{
+					daftar  = daftar+i+", ";
+				}
+		
+		
+		}
+	document.getElementById("bil").innerHTML = "Urutan bilangan prima yang dihasilkan"+daftar+" terima kasih.";
+}
+</script>
+
+</body>
+</html>
